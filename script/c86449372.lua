@@ -65,7 +65,7 @@ function c86449372.damop(e,tp,eg,ep,ev,re,r,rp)
 end
 function c86449372.repfilter(c,tp)
 	return c:IsFaceup() and c:IsControler(tp) and c:IsLocation(LOCATION_MZONE)
-		and c:IsSetCard(0x235) and c:IsReason(REASON_BATTLE) and not c:IsReason(REASON_REPLACE)
+		and c:IsSetCard(0x234) and c:IsReason(REASON_BATTLE) and not c:IsReason(REASON_REPLACE)
 end
 function c86449372.reptg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return eg:IsExists(c86449372.repfilter,1,nil,tp) and e:GetHandler():IsAbleToRemove() end

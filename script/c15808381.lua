@@ -31,7 +31,7 @@ function c15808381.initial_effect(c)
 	c:RegisterEffect(e3)
 end
 function c15808381.thfilter(c)
-	return c:IsLevelBelow(4) and c:IsSetCard(0x235) and c:IsType(TYPE_MONSTER) and not c:IsCode(15808381) and c:IsAbleToHand()
+	return c:IsLevelBelow(4) and c:IsSetCard(0x234) and c:IsType(TYPE_MONSTER) and not c:IsCode(15808381) and c:IsAbleToHand()
 end
 function c15808381.thtg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(c15808381.thfilter,tp,LOCATION_DECK,0,1,nil) end

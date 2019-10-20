@@ -26,7 +26,7 @@ function c59332125.spfilter(c,e,tp,m,f,chkf)
 		and c:IsCanBeSpecialSummoned(e,SUMMON_TYPE_FUSION,tp,false,false) and c:CheckFusionMaterial(m,nil,chkf)
 end
 function c59332125.chkfilter(c,tp)
-	return c:IsControler(tp) and c:IsSetCard(0x235)
+	return c:IsControler(tp) and c:IsSetCard(0x234)
 end
 function c59332125.fcheck(tp,sg,fc)
 	if sg:IsExists(c59332125.chkfilter,1,nil,tp) then

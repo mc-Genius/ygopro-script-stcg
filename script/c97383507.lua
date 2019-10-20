@@ -41,7 +41,7 @@ function c97383507.spcon1(e,tp,eg,ep,ev,re,r,rp)
 	return eg:IsExists(c97383507.cfilter,1,nil,lg)
 end
 function c97383507.spfilter1(c,e,tp,zone)
-	return c:IsLevelBelow(4) and c:IsSetCard(0x235) and c:IsCanBeSpecialSummoned(e,0,tp,false,false,POS_FACEUP,tp,zone)
+	return c:IsLevelBelow(4) and c:IsSetCard(0x234) and c:IsCanBeSpecialSummoned(e,0,tp,false,false,POS_FACEUP,tp,zone)
 end
 function c97383507.sptg1(e,tp,eg,ep,ev,re,r,rp,chk)
 	local zone=bit.band(e:GetHandler():GetLinkedZone(tp),0x1f)

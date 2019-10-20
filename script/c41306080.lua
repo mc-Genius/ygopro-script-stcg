@@ -26,7 +26,7 @@ function c41306080.initial_effect(c)
 	c:RegisterEffect(e2)
 end
 function c41306080.cfilter(c)
-	return c:IsFaceup() and c:IsSetCard(0x235)
+	return c:IsFaceup() and c:IsSetCard(0x234)
 end
 function c41306080.spcon(e,tp,eg,ep,ev,re,r,rp)
 	return Duel.IsExistingMatchingCard(c41306080.cfilter,tp,LOCATION_MZONE,0,1,nil)
@@ -50,7 +50,7 @@ function c41306080.thcost(e,tp,eg,ep,ev,re,r,rp,chk)
 	Duel.Release(g,REASON_COST)
 end
 function c41306080.thfilter1(c)
-	return c:IsLevelAbove(5) and c:IsSetCard(0x235) and c:IsType(TYPE_MONSTER) and c:IsAbleToHand()
+	return c:IsLevelAbove(5) and c:IsSetCard(0x234) and c:IsType(TYPE_MONSTER) and c:IsAbleToHand()
 end
 function c41306080.thtg(e,tp,eg,ep,ev,re,r,rp,chk)
 	local c=e:GetHandler()

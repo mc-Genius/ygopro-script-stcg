@@ -42,7 +42,7 @@ function c61399402.descost(e,tp,eg,ep,ev,re,r,rp,chk)
 	e:GetHandler():RemoveOverlayCard(tp,1,1,REASON_COST)
 end
 function c61399402.cfilter(c)
-	return c:IsFaceup() and c:IsSetCard(0x235)
+	return c:IsFaceup() and c:IsSetCard(0x234)
 end
 function c61399402.destg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(c61399402.cfilter,tp,LOCATION_MZONE,0,1,nil)

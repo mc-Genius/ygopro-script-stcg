@@ -28,7 +28,7 @@ function c22933016.initial_effect(c)
 	c:RegisterEffect(e2)
 end
 function c22933016.filter(c,e,tp)
-	return c:IsSetCard(0x235) and c:IsCanBeSpecialSummoned(e,0,tp,false,false)
+	return c:IsSetCard(0x234) and c:IsCanBeSpecialSummoned(e,0,tp,false,false)
 end
 function c22933016.target(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if chkc then return chkc:IsControler(tp) and chkc:IsLocation(LOCATION_GRAVE) and c22933016.filter(chkc,e,tp) end
@@ -70,7 +70,7 @@ function c22933016.thcost(e,tp,eg,ep,ev,re,r,rp,chk)
 	Duel.Remove(g,POS_FACEUP,REASON_COST)
 end
 function c22933016.thfilter(c)
-	return (c:IsLocation(LOCATION_GRAVE) or c:IsFaceup()) and c:IsSetCard(0x236) and c:IsType(TYPE_SPELL+TYPE_TRAP) and not c:IsCode(22933016) and c:IsAbleToHand()
+	return (c:IsLocation(LOCATION_GRAVE) or c:IsFaceup()) and c:IsSetCard(0x235) and c:IsType(TYPE_SPELL+TYPE_TRAP) and not c:IsCode(22933016) and c:IsAbleToHand()
 end
 function c22933016.thtg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if chkc then return chkc:IsLocation(LOCATION_GRAVE+LOCATION_REMOVED) and chkc:IsControler(tp) and c22933016.thfilter(chkc) end

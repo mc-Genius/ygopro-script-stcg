@@ -15,14 +15,14 @@ function c85327820.filter(c,e,tp)
 	return c:IsRace(RACE_CYBERSE)
 end
 function c85327820.cfilter(c)
-	return c:IsFaceup() and c:IsSetCard(0x235)
+	return c:IsFaceup() and c:IsSetCard(0x234)
 end
 function c85327820.mfilter(c)
-	return c:IsSetCard(0x235)
+	return c:IsSetCard(0x234)
 end
 function c85327820.target(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then
-		local mg=Duel.GetRitualMaterial(tp):Filter(Card.IsSetCard,nil,0x235)
+		local mg=Duel.GetRitualMaterial(tp):Filter(Card.IsSetCard,nil,0x234)
 		local mg2=nil
 		if Duel.IsExistingMatchingCard(c85327820.cfilter,tp,LOCATION_MZONE,0,1,nil) then
 			e:SetLabel(1)
@@ -33,7 +33,7 @@ function c85327820.target(e,tp,eg,ep,ev,re,r,rp,chk)
 	Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,nil,1,tp,LOCATION_HAND)
 end
 function c85327820.activate(e,tp,eg,ep,ev,re,r,rp)
-	local mg=Duel.GetRitualMaterial(tp):Filter(Card.IsSetCard,nil,0x235)
+	local mg=Duel.GetRitualMaterial(tp):Filter(Card.IsSetCard,nil,0x234)
 	local mg2=nil
 	if e:GetLabel()==1 then
 		mg2=Duel.GetMatchingGroup(aux.RitualExtraFilter,tp,LOCATION_GRAVE,0,nil,c85327820.mfilter)

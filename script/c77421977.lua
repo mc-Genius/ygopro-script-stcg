@@ -53,7 +53,7 @@ function c77421977.initial_effect(c)
 	c:RegisterEffect(e6)
 end
 function c77421977.cfilter(c)
-	return c:IsFaceup() and c:IsSetCard(0x235)
+	return c:IsFaceup() and c:IsSetCard(0x234)
 end
 function c77421977.condition(e,tp,eg,ep,ev,re,r,rp)
 	return Duel.GetCurrentPhase()~=PHASE_DAMAGE or not Duel.IsDamageCalculated()

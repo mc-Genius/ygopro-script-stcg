@@ -28,7 +28,7 @@ function c14146794.initial_effect(c)
 end
 function c14146794.damcon1(e,tp,eg,ep,ev,re,r,rp)
 	local d=Duel.GetAttackTarget()
-	return d and d:IsControler(tp) and d:IsSetCard(0x235) and Duel.GetBattleDamage(tp)>0
+	return d and d:IsControler(tp) and d:IsSetCard(0x234) and Duel.GetBattleDamage(tp)>0
 end
 function c14146794.damcost1(e,tp,eg,ep,ev,re,r,rp,chk)
 	local c=e:GetHandler()
@@ -47,7 +47,7 @@ function c14146794.damval1(e,tp,eg,ep,ev,re,r,rp)
 	Duel.ChangeBattleDamage(tp,0)
 end
 function c14146794.damcon2(e,tp,eg,ep,ev,re,r,rp)
-	return ((re:GetHandler():IsSetCard(0x235) and re:IsActiveType(TYPE_MONSTER)) or (re:GetHandler():IsSetCard(0x236) and re:IsActiveType(TYPE_SPELL+TYPE_TRAP)))
+	return ((re:GetHandler():IsSetCard(0x234) and re:IsActiveType(TYPE_MONSTER)) or (re:GetHandler():IsSetCard(0x235) and re:IsActiveType(TYPE_SPELL+TYPE_TRAP)))
 		and aux.damcon1(e,1-tp,eg,ep,ev,re,r,rp)
 end
 function c14146794.damop2(e,tp,eg,ep,ev,re,r,rp)

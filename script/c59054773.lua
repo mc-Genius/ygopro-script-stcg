@@ -35,7 +35,7 @@ function c59054773.spcon(e,tp,eg,ep,ev,re,r,rp)
 	return not Duel.IsExistingMatchingCard(c59054773.cfilter,tp,LOCATION_MZONE,0,1,nil)
 end
 function c59054773.spfilter(c,e,tp)
-	return c:IsLevelBelow(4) and c:IsSetCard(0x235) and c:IsCanBeSpecialSummoned(e,0,tp,false,false)
+	return c:IsLevelBelow(4) and c:IsSetCard(0x234) and c:IsCanBeSpecialSummoned(e,0,tp,false,false)
 end
 function c59054773.sptg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.GetLocationCount(tp,LOCATION_MZONE)>0
@@ -74,7 +74,7 @@ function c59054773.splimit2(e,c)
 	return not c:IsRace(RACE_CYBERSE)
 end
 function c59054773.costfilter(c)
-	return c:IsSetCard(0x235) and c:IsType(TYPE_MONSTER) and c:IsAbleToRemoveAsCost()
+	return c:IsSetCard(0x234) and c:IsType(TYPE_MONSTER) and c:IsAbleToRemoveAsCost()
 end
 function c59054773.setcost(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(c59054773.costfilter,tp,LOCATION_GRAVE,0,1,nil) end

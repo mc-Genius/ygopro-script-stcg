@@ -28,7 +28,7 @@ function c16020923.initial_effect(c)
 	c:RegisterEffect(e3)
 end
 function c16020923.thfilter(c)
-	return c:IsSetCard(0x236) and c:IsType(TYPE_SPELL+TYPE_TRAP) and c:IsAbleToHand()
+	return c:IsSetCard(0x235) and c:IsType(TYPE_SPELL+TYPE_TRAP) and c:IsAbleToHand()
 end
 function c16020923.thtg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(c16020923.thfilter,tp,LOCATION_DECK,0,1,nil) end
@@ -43,7 +43,7 @@ function c16020923.thop(e,tp,eg,ep,ev,re,r,rp)
 	end
 end
 function c16020923.lvfilter(c)
-	return c:IsFaceup() and c:IsSetCard(0x235) and not c:IsLevel(4) and c:IsLevelAbove(1)
+	return c:IsFaceup() and c:IsSetCard(0x234) and not c:IsLevel(4) and c:IsLevelAbove(1)
 end
 function c16020923.lvtg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if chkc then return chkc:IsLocation(LOCATION_MZONE) and chkc:IsControler(tp) and c16020923.lvfilter(chkc) end

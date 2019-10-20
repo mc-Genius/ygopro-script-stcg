@@ -30,7 +30,7 @@ function c88413677.initial_effect(c)
 	c:RegisterEffect(e3)
 end
 function c88413677.thfilter1(c)
-	return c:IsSetCard(0x235) and c:IsType(TYPE_MONSTER) and c:IsAbleToHand()
+	return c:IsSetCard(0x234) and c:IsType(TYPE_MONSTER) and c:IsAbleToHand()
 end
 function c88413677.thtg1(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if chkc then return chkc:IsLocation(LOCATION_GRAVE) and chkc:IsControler(tp) and c88413677.thfilter1(chkc) end
@@ -49,7 +49,7 @@ function c88413677.thcon2(e,tp,eg,ep,ev,re,r,rp)
 	return r==REASON_LINK and e:GetHandler():GetReasonCard():IsRace(RACE_CYBERSE)
 end
 function c88413677.thfilter2(c)
-	return c:IsSetCard(0x236) and c:IsType(TYPE_SPELL+TYPE_TRAP) and c:IsAbleToHand()
+	return c:IsSetCard(0x235) and c:IsType(TYPE_SPELL+TYPE_TRAP) and c:IsAbleToHand()
 end
 function c88413677.thtg2(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if chkc then return chkc:IsLocation(LOCATION_GRAVE) and chkc:IsControler(tp) and c88413677.thfilter2(chkc) end
